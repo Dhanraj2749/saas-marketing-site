@@ -13,6 +13,18 @@ storyblokInit({
 export const metadata: Metadata = {
   title: "CallFlow – AI-Powered Customer Communications",
   description: "Voice, SMS, and AI in one workspace for sales and support teams.",
+  openGraph: {
+    title: "CallFlow – AI-Powered Customer Communications",
+    description: "Voice, SMS, and AI in one workspace for sales and support teams.",
+    url: "https://saas-marketing-site-chi.vercel.app",
+    siteName: "CallFlow",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CallFlow – AI-Powered Customer Communications",
+    description: "Voice, SMS, and AI in one workspace for sales and support teams.",
+  },
 };
 
 export default function RootLayout({
