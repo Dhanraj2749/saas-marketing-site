@@ -1,3 +1,4 @@
+import ContactForm from "./components/ContactForm";
 import { getStoryblokApi } from "@storyblok/react/rsc";
 
 async function getHomeContent() {
@@ -145,26 +146,7 @@ export default async function Home() {
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to get started?</h2>
         <p className="text-gray-500 mb-10">Talk to our team and see CallFlow in action.</p>
         <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm">
-          <div className="flex flex-col gap-4">
-            <input
-              type="text"
-              placeholder="Your name"
-              className="border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300"
-            />
-            <input
-              type="email"
-              placeholder="Work email"
-              className="border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300"
-            />
-            <input
-              type="text"
-              placeholder="Company name"
-              className="border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300"
-            />
-            <button className="bg-indigo-600 text-white py-3 rounded-full text-sm font-semibold hover:bg-indigo-700 transition-colors">
-              Request a demo
-            </button>
-          </div>
+         <ContactForm />
           <p className="text-xs text-gray-400 mt-4">We'll get back to you within 24 hours.</p>
         </div>
       </section>
