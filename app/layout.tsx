@@ -1,3 +1,4 @@
+import Script from "next/script";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
@@ -34,7 +35,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={geist.className}>{children}</body>
+      <body className={geist.className}>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-1EYNFV6X4V`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1EYNFV6X4V');
+          `}
+        </Script>
+        {children}
+      </body>
     </html>
   );
 }
