@@ -34,8 +34,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={geist.className}>
+   <html lang="en">
+  <head>
+    <script src="https://t.contentsquare.net/uxa/6ada5a23b5cc0.js" defer></script>
+  </head>
+  <body className={geist.className}>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=G-1EYNFV6X4V`}
           strategy="afterInteractive"
