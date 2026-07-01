@@ -1,6 +1,16 @@
 import ContactForm from "./components/ContactForm";
+import HeroAB from "./components/HeroAB";
 import { getStoryblokApi } from "@storyblok/react/rsc";
-
+const AB_VARIANTS = {
+  A: {
+    headline: "Talk to your customers. Let AI handle the rest.",
+    cta: "Start free trial",
+  },
+  B: {
+    headline: "Close more deals with AI-powered voice.",
+    cta: "Get a demo today",
+  },
+};
 async function getHomeContent() {
   const storyblokApi = getStoryblokApi();
   const { data } = await storyblokApi.get("cdn/stories/home", {
@@ -34,9 +44,7 @@ export default async function Home() {
         <span className="bg-indigo-50 text-indigo-600 text-xs font-semibold px-3 py-1 rounded-full mb-6 uppercase tracking-wide">
           AI-Powered Customer Communications
         </span>
-        <h1 className="text-5xl font-bold text-gray-900 leading-tight mb-6">
-  {story.content.body[0]?.headline || "Talk to your customers."}
-</h1>
+        <HeroAB />
        <p className="text-xl text-gray-500 max-w-2xl mb-10">
   {story.content.body[0]?.subheadline}
 </p>
